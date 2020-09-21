@@ -9,28 +9,11 @@ Modified by Michael Howard for the Super Mario Bros. theme Arduino sketch
 */
 
 //Plays a song on a speaker
-#include <stdio.h>
-#include <stddef.h>
-#include <stdint.h>
-#ifdef _WIN32
-#include <Windows.h>
-#define sleep(x) Sleep(x)
-#else
-#include <unistd.h>
-#define sleep(x) usleep(x)
-#endif
 
 #include "lib/notes.h"
 #include "lib/times.h"
+#include "lib/play.h"
 
-
-void sheet_music(int notes[], int times[], size_t arr_size){
-    int i;
-	for ( i = 0; i < arr_size; i++){
-		Beep(notes[i], times[i]);
-		sleep(times[i]);
-	}
-}
 
 int main(){
 	sheet_music(notes_start, times_start, sizeof(notes_start) / sizeof(notes_start[0]));

@@ -6,7 +6,8 @@
             "command": "C:\\MinGW\\bin\\gcc.exe",
             "args": [
                 "-g",
-                "${file}",
+                "${workspaceFolder}\\*.c",
+                "${workspaceFolder}\\lib\\*.c",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
