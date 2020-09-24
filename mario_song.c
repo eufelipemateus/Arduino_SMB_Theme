@@ -8,12 +8,9 @@ the Free Software Foundation.
 Modified by Michael Howard for the Super Mario Bros. theme Arduino sketch
 */
 
-//Plays a song on a speaker
-
 #include "lib/notes.h"
 #include "lib/times.h"
 #include "lib/play.h"
-
 
 int main(){
 	sheet_music(notes_start, times_start, sizeof(notes_start) / sizeof(notes_start[0]));

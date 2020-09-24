@@ -1,4 +1,4 @@
-//The Duration of each note (in ms)
+
 int times_start[] = {
  150, 150, 150, 150, 150, 150, 150, 150,
  150, 450, 150, 450
