@@ -12,7 +12,5 @@
 #define sleep(x) usleep(x)
 #endif
 
-
 void sheet_music(int notes[], int times[], size_t arr_size);
-
 #endif

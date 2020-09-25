@@ -22,9 +22,12 @@ CC_FLAGS=-c         \
          -ansi      \
          -pedantic
 
+ifeq ($(OS),Windows_NT)
+RM = rd /s /q
+else
 # Command used at clean target
 RM = rm -rf
-
+endif
 #
 # Compilation and linking
 #
@@ -50,7 +53,7 @@ objFolder:
 	@ mkdir -p objects
 
 clean:
-	@ $(RM) ./objects/*.o $(PROJ_NAME) *~
-	@ rmdir objects
+	@ $(RM) ./objects/*.o
+	@ rmdir ./objects
 
 .PHONY: all clean
