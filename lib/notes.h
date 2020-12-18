@@ -1,4 +1,3 @@
-
 #include "pitches.h"
 
 int notes_start[] = {
